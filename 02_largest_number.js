@@ -16,6 +16,7 @@ function largestNumber(arr) {
         for (let i = 0; i < arr.length; i += 1) {
             if (arr[i] > largestNum) {
                 largestNum = arr[i];
+                console.log(largestNum);
             }
         }
     }

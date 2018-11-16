@@ -18,38 +18,46 @@
  -->
 <!doctype html>
 <html>
-  <head>
-    <title>Hidden Message</title>
 
-    <style>
+<head>
+  <title>Hidden Message</title>
+
+  <style>
     body {
       text-align: center;
     }
+
     #hidden-message {
-      background: #c4c5ff;
+      background-image: url(https://media1.tenor.com/images/5a1de349213de87141c387b862de4808/tenor.gif);
+      background-repeat: no-repeat;
+      background-size: cover;
       padding: 200px;
       display: none;
     }
-    </style>
-  </head>
+  </style>
+</head>
 
-  <body>
-    <div id="hidden-message">This is our hidden message!</div>
-    <button id="button-show">Show secret message</button>
-  </body>
+<body>
+  <button id="button-show">Show secret message</button>
+  <button id="button-hide">Hide secret message</button>
+  <div id="hidden-message">This is our hidden message!</div>
+</body>
 
-  <script>
+<script>
   // Get the element #hidden-message and assign it to hiddenMessage variable
   const hiddenMessage = document.querySelector('#hidden-message')
-  
-  // Get the element #button-show and assign it to buttonShow variable
-  const buttonShow = document.querySelector('#button-show')
 
+  // Get the element #button-show and assign it to buttonShow variable
+  const buttonShow = document.querySelector('#button-show');
+  const buttonHide = document.querySelector("#button-hide");
   // Listen for a buttonShow click
   buttonShow.onclick = function () {
     // buttonShow has been clicked, show the hidden message.
     hiddenMessage.style.display = 'block';
   }
-  </script>
+  buttonHide.onclick = function () {
+    hiddenMessage.style.display = "none";
+  }
+</script>
 
 </html>
